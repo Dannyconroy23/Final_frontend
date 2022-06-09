@@ -1,11 +1,31 @@
+import ReactDOM from "react-dom/client";
+import {React, useState, useEffect} from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Components/Layout";
+import Home from "./Components/Home";
+import Characters from "./Components/Characters";
+import Favorites from ".//Components/Favorites";
+import NoPage from "./Components/NoPage";
+import Login from "./Components/Login";
 
-import './App.css';
+export default function App() {
 
-function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // if(!isAuthenticated) return <Login />
   return (
-    <div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Characters" element={<Characters />} />
+          <Route path="Favorites" element={<Favorites />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
