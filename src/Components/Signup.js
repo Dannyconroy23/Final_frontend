@@ -29,19 +29,24 @@ function Signup({setUser, setIsAuthenticated}){
 
     return (
         <form onSubmit={handleSubmit}>
+            <h1>Create User</h1>
+            <label> Username:
           <input
             type="text"
             name="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-          />
+          ></input>
+          </label>
+          <label>Password:
           <input
             type="text"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Login</button>
+          ></input>
+          </label>
+          <button type="submit">Sign Up</button>
         </form>
       );
 }

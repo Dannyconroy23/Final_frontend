@@ -5,6 +5,8 @@ const Layout = () => {
     <>
       <nav>
         <ul>
+            <img src="https://th.bing.com/th/id/OIP.QcxCmJ_8OxC-F4pB-o1aFgHaEK?pid=ImgDet&rs=1">
+            </img>
           <li>
             <Link to="/">Home</Link>
           </li>
