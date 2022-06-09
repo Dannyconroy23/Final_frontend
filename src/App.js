@@ -7,6 +7,7 @@ import Characters from "./Components/Characters";
 import Favorites from ".//Components/Favorites";
 import NoPage from "./Components/NoPage";
 import Login from "./Components/Login";
+import LoginSignup from "./Components/LoginSignup"
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -16,7 +17,7 @@ export default function App() {
 
 
 
-  if(!isAuthenticated) return <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
+  if(!isAuthenticated) return <LoginSignup setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
   return (
     <BrowserRouter>
       <Routes>
