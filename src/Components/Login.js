@@ -1,22 +1,29 @@
 import {React, useState} from 'react'
 
-function Login() {
+function Login({setUser, setIsAuthenticated}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
   
     function handleSubmit(e) {
-      e.preventDefault();
-      console.log("user")
-      fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username: username, password: password }),
-      })
-        .then((r) => r.json())
-        .then((user) => console.log(user));
-    }
+        e.preventDefault();
+        fetch('/login',{
+          method:'POST',
+          headers:{
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ username: username, password: password }),
+        })
+        .then(r => {
+          if(r.ok){
+            r.json()
+            .then(user => {
+              setUser(user)
+              setIsAuthenticated(true)
+            })
+          } 
+        })
+      }
 
     
   

@@ -10,12 +10,13 @@ import Login from "./Components/Login";
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
 
   
 
 
 
-  if(!isAuthenticated) return<Login/>
+  if(!isAuthenticated) return <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
   return (
     <BrowserRouter>
       <Routes>
