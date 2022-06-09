@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import {React, useState, useEffect} from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
 import Characters from "./Components/Characters";
@@ -9,15 +9,18 @@ import NoPage from "./Components/NoPage";
 import Login from "./Components/Login";
 
 export default function App() {
-
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // if(!isAuthenticated) return <Login />
+  
+
+
+
+  if(!isAuthenticated) return<Login/>
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route path="Home" element={<Home />} />
           <Route path="Characters" element={<Characters />} />
           <Route path="Favorites" element={<Favorites />} />
           <Route path="*" element={<NoPage />} />
