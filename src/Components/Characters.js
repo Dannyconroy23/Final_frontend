@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import CharacterCard from './CharacterCard'
+import Grid from '@mui/material/Grid';
 
 function Characters(){
 
@@ -16,14 +17,14 @@ function Characters(){
 
 
   return (
-    <div>
+    <div className="CharactersPage">
       <div className="CharactersHeaderDiv">
         <h1>All Characters</h1>
       </div>
       
-      <div className="Characters">
+      <ul className="Characters">
         {renderCharacter}
-      </div>
+      </ul>
       
     </div>
   )

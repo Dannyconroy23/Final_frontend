@@ -21,6 +21,7 @@ function CharaceterCard({char}){
                         <div className='more-information'>
                             <p className='description'>{char.films}</p>
                         </div>
+                        <button className="FavoriteBtn">Favorite</button>
                     </div>
                 </div>
             </div>
