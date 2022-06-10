@@ -6,7 +6,6 @@ import Home from "./Components/Home";
 import Characters from "./Components/Characters";
 import Favorites from ".//Components/Favorites";
 import NoPage from "./Components/NoPage";
-import Login from "./Components/Login";
 import LoginSignup from "./Components/LoginSignup"
 
 export default function App() {
@@ -21,7 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout setUser={setUser} setIsAuthenticated={setIsAuthenticated} />}>
           <Route path="Home" element={<Home />} />
           <Route path="Characters" element={<Characters />} />
           <Route path="Favorites" element={<Favorites />} />

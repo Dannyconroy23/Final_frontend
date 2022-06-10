@@ -25,10 +25,8 @@ function Login({setUser, setIsAuthenticated}) {
         })
       }
 
-    
-  
     return (
-      <form onSubmit={handleSubmit}>
+      <form className="LoginForm" onSubmit={handleSubmit}>
           <h1>Log In</h1>
           <label>Username:
         <input

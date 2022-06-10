@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Sofia', sans-serif;
+}
+
+/* log in and sign up forms */
+
+.LoginForm {
+    text-align: center;
+    padding-top: 150px;
+    font-family: 'Sofia', sans-serif;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 50vh;
+  }
+
+.login-signup-page {
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Sofia', sans-serif;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 50vh;
+} 
+
+/* NAV BAR AND ROUTES */
+
+.nav {
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: white;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: auto;
+    padding-top: 30px;
+    height: 100vh;
+    border: 5px solid black;
+    opacity: 80%;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 90%;
+}
+
+.navBtn {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.navLogoutDiv {
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* CHARACTER STYLING  */
+.CharactersHeaderDiv {
+  text-align: center;
+}
+
+
+/* FAVORITES STYLING */
+
+.FavoritesHeaderDiv {
+  text-align: center;
+}
+
