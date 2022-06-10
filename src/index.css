@@ -80,10 +80,17 @@ code {
   text-align: center;
 }
 
+.CharacterCard {
+   text-align: center;
+  padding-top: 50px;
+  
+}
+
 
 /* FAVORITES STYLING */
 
 .FavoritesHeaderDiv {
   text-align: center;
+  padding-top: 50px;
 }
 

@@ -8,8 +8,10 @@ function Characters(){
   useEffect( () => {
     fetch("/characters")
     .then((resp)=>resp.json())
-    .then((data)=>setCharacter(data))
+    .then((data)=>setCharacter(data.data))
   }, [] )
+
+  const renderCharacter = character.map(char => <CharacterCard char={char} key={char._id} />)
 
 
 
@@ -18,8 +20,11 @@ function Characters(){
       <div className="CharactersHeaderDiv">
         <h1>All Characters</h1>
       </div>
+      
       <div className="Characters">
+        {renderCharacter}
       </div>
+      
     </div>
   )
 }
