@@ -8,9 +8,11 @@ import Favorites from ".//Components/Favorites";
 import NoPage from "./Components/NoPage";
 import LoginSignup from "./Components/LoginSignup"
 
-export default function App() {
+function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
+
+ 
 
   
 
@@ -30,6 +32,8 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
