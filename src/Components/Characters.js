@@ -1,8 +1,7 @@
 import {useEffect, useState} from 'react';
 import CharacterCard from './CharacterCard'
-import Grid from '@mui/material/Grid';
 
-function Characters(){
+function Characters({user, characters, addToCollection}){
 
   const [character, setCharacter] = useState([])
 
@@ -12,7 +11,11 @@ function Characters(){
     .then((data)=>setCharacter(data.data))
   }, [] )
 
-  const renderCharacter = character.map(char => <CharacterCard char={char} key={char._id} />)
+  
+
+  
+
+  const renderCharacter = character.map(char => <CharacterCard char={char} characters={characters} character={character} setCharacter={setCharacter} key={char._id} addToCollection={addToCollection} user={user} />)
 
 
 

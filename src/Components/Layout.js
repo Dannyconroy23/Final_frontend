@@ -19,13 +19,13 @@ const Layout = ({setIsAuthenticated,setUser}) => {
             <img className="logo" alt="logo" src="https://th.bing.com/th/id/OIP.QcxCmJ_8OxC-F4pB-o1aFgHaEK?pid=ImgDet&rs=1">
             </img>
           <li className="navBtn" >
-            <Link to="/">Home</Link>
+            <Link style={{color: 'black',textDecoration: 'none'}} to="/home">Home</Link>
           </li>
           <li className="navBtn" >
-            <Link to="/Characters">Characters</Link>
+            <Link style={{color: 'black',textDecoration: 'none'}} to="/Characters">Characters</Link>
           </li>
           <li className="navBtn" >
-            <Link to="/Favorites">Favorites</Link>
+            <Link style={{color: 'black',textDecoration: 'none'}} to="/Favorites">Favorites</Link>
           </li>
           <div className="navLogoutDiv">
                 <button  className="navLogout"  onClick={handleLogout}>LOG OUT</button>

@@ -29,7 +29,7 @@ function Signup({setUser, setIsAuthenticated}){
 
     return (
         <form className="SignupForm" onSubmit={handleSubmit}>
-            <h1>Create User</h1>
+            <h1 className="createUser">Create User</h1>
             <label> Username:
           <input
             type="text"

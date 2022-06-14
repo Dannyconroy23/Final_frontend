@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -24,10 +37,32 @@ code {
 .LoginForm {
     text-align: center;
     padding-top: 150px;
+    margin-left: 25%;
+    margin-right:25%;
     font-family: 'Sofia', sans-serif;
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-    height: 50vh;
+    height: 45vh;
+    border: 3px solid black;
+    
+  }
+
+  .SignupForm {
+    text-align: center;
+    padding-top: 150px;
+    margin-left: 25%;
+    margin-right:25%;
+    font-family: 'Sofia', sans-serif;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height: 45vh;
+    border: 3px solid black;
+    
+
+  }
+
+  .createUser {
+  
   }
 
 .login-signup-page {
@@ -36,8 +71,12 @@ code {
     font-family: 'Sofia', sans-serif;
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
-    height: 50vh;
+    height: 25vh;
 } 
+
+
+
+
 
 /* NAV BAR AND ROUTES */
 
@@ -52,8 +91,13 @@ code {
     overflow-y: auto;
     padding-top: 30px;
     height: 100vh;
-    border: 5px solid black;
+    border: 3px solid black;
     opacity: 80%;
+    /* background: linear-gradient(-45deg, #f6f7f8, #27bde6, #132485, #f0eff1);
+	  background-size: 400% 100%;
+	  animation: gradient 15s ease infinite;
+	  height: 100vh; */
+
 }
 
 .logo {
@@ -62,17 +106,67 @@ code {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .navBtn {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid;
+  margin-top: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+  background-color: #5ca1e1;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+
+
+}
+.navBtn{
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navBtn:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navBtn:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.navBtn:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 .navLogoutDiv {
   text-align: center;
   padding-top: 50px;
+}
+
+.navLogout {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  padding:5px;
+}
+
+.navLogout:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* CHARACTER STYLING  */
@@ -84,8 +178,8 @@ code {
 .CharacterCard {
     text-align: center;
     padding: 25px;
-    margin-bottom: 200px;
-    margin-left: 210px;
+    margin-bottom: 150px;
+    margin-left: 150px;
     display: inline-block;
     width: 36%;
     height: 36%;
@@ -101,6 +195,13 @@ code {
   background-color: white;
   cursor: grab;
 }
+
+.CharactersPage {
+    padding: 0;
+    margin-left: 200px;
+    
+}
+
 
 
 
@@ -126,4 +227,55 @@ code {
   text-align: center;
   padding-top: 50px;
 }
+
+
+
+
+
+/* HOME */
+
+
+
+.HomeHeaderDiv {
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.Home {
+  background: linear-gradient(-45deg, #f6f7f8, #27bde6, #132485, #f0eff1);
+	  background-size: 400% 400%;
+	  animation: gradient 15s ease infinite;
+	  height: 100vh;
+}
+
+.CharacterLink {
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.HomeButton {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid;
+  margin-top: 50px;
+  margin-left: 550px;
+  margin-right: 550px;
+  border-radius: 4px;
+  background-color: #5ca1e1;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+
+}
+
+
+
+
 

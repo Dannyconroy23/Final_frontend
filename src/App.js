@@ -12,11 +12,6 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
 
- 
-
-  
-
-
 
   if(!isAuthenticated) return <LoginSignup setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
   return (
@@ -24,8 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout setUser={setUser} setIsAuthenticated={setIsAuthenticated} />}>
           <Route path="Home" element={<Home />} />
-          <Route path="Characters" element={<Characters />} />
-          <Route path="Favorites" element={<Favorites />} />
+          <Route path="Characters" element={<Characters user={user} />} />
+          <Route path="Favorites" element={<Favorites  user={user} />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
