@@ -33,7 +33,7 @@ function CharacterCard({char, setCharacter, user}){
             })
         })
         .then(r => r.json())
-        .then(data => setFavorite(data))
+        .then(data => addToFavorites(data))
     }
 
     return (

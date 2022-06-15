@@ -1,4 +1,7 @@
+import { useParams} from "react-router-dom";
+
 function FavoritesCard({fav, setFavorites}) {
+    const { id } = useParams();
 
     const handleDelete = () => {
         fetch(`/favorites`, {
