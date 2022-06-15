@@ -6,10 +6,6 @@ function FavoritesCard({fav}) {
             <div className='information-container'>
                 <div className='info-div'>
                     <h2 className='title'>{fav.name}</h2>
-                    <p className='subtitle'>{fav.tvShows}</p>
-                    <div className='more-information'>
-                        <p className='description'>{fav.films}</p>
-                    </div>
                 </div>
             </div>
         </div>

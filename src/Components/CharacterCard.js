@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 
@@ -7,19 +7,16 @@ import React from 'react';
 
 
 
-function CharacterCard({char, characters, setCharacter, user}){
+function CharacterCard({char, setCharacter, user}){
     // const [character, setCharacter] = useState({})
+    const [favorite, setFavorite] = useState([])
+
+
+    const addToFavorites = (newFavorite) => {
+        setFavorite(fav => [...fav, newFavorite])
+      }
     
-   
-
-
-    
-
-    
-  
-
-
-      const handleFavorite = () => {
+   const handleFavorite = () => {
         fetch('/favorites', {
             method: 'POST',
             headers: {
@@ -27,14 +24,14 @@ function CharacterCard({char, characters, setCharacter, user}){
                 Accept: 'application/json'
             },
             body: JSON.stringify({
-                // image: char.imageUrl,
-                // name: char.name,
                 character_id: char._id,
-                user_id: user.id
+                user_id: user.id,
+                char
+               
             })
         })
         .then(r => r.json())
-        .then(data => setCharacter(data))
+        .then(data => setFavorite(data))
     }
 
     return (
