@@ -11,7 +11,7 @@ function Favorites({user, characters}) {
     .then(data => setFavorites(data))
     },[])
 
-    const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} user={user} />)
+    const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} setFavorites={setFavorites} user={user} />)
 
   return (
     <div>

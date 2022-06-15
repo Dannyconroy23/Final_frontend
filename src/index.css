@@ -228,6 +228,20 @@ code {
   padding-top: 50px;
 }
 
+.FavoritesCard {
+  text-align: center;
+    padding: 25px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+    display: inline-block;
+    width: 36%;
+    height: 36%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+
 
 
 

@@ -26,6 +26,8 @@ function CharacterCard({char, setCharacter, user}){
             body: JSON.stringify({
                 character_id: char._id,
                 user_id: user.id,
+                name: char.name,
+                imageUr: char.imageUrl,
                 char
                
             })

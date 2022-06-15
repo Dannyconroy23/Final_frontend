@@ -1,12 +1,28 @@
-function FavoritesCard({fav}) {
+function FavoritesCard({fav, setFavorites}) {
+
+    const handleDelete = () => {
+        fetch(`/favorites`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                Accept: 'application/json'
+            },
+           
+        })
+        .then(r => r.json())
+        .then(data => setFavorites(data))
+    }
+    
     return(
-        <div className='FavorireCard'>
+        <div className='FavoritesCard'>
         <div>
+            <h1>{fav.character_id}</h1>
             <img alt={fav.name}src={fav.imageUrl}></img>
             <div className='information-container'>
                 <div className='info-div'>
                     <h2 className='title'>{fav.name}</h2>
                 </div>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     </div>
