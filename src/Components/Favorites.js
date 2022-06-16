@@ -8,11 +8,18 @@ function Favorites({user, characters}) {
   const [favorites, setFavorites] = useState([])
   const [requestData, setRequestData] = useState(new Date());
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   fetch(`/favorites/by_user/${user.id}`)
+  //   .then(r => r.json())
+  //   .then(data => setFavorites(data))
+  //   },[])
+  useEffect(()=> {
+    console.log('hello')
     fetch(`/favorites/by_user/${user.id}`)
     .then(r => r.json())
     .then(data => setFavorites(data))
-    },)
+
+  },[id])
 
     const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} setFavorites={setFavorites} favorites={favorites} user={user} />)
 
