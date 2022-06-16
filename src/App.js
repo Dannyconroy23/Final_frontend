@@ -12,6 +12,20 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    fetch('/authorized_user')
+    .then(r => {
+      if(r.ok){
+        r.json()
+        .then(user => {
+          setIsAuthenticated(true)
+          setUser(user)
+        })
+        
+      }
+    })
+  }, []);
+
 
   if(!isAuthenticated) return <LoginSignup setUser={setUser} setIsAuthenticated={setIsAuthenticated} />
   return (

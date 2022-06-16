@@ -6,14 +6,15 @@ function Favorites({user, characters}) {
   const { id } = useParams();
 
   const [favorites, setFavorites] = useState([])
+  const [requestData, setRequestData] = useState(new Date());
 
   useEffect(() => {
     fetch(`/favorites/by_user/${user.id}`)
     .then(r => r.json())
     .then(data => setFavorites(data))
-    },[id])
+    },)
 
-    const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} setFavorites={setFavorites} user={user} />)
+    const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} setFavorites={setFavorites} favorites={favorites} user={user} />)
 
   return (
     <div>
