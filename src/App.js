@@ -8,6 +8,7 @@ import Favorites from ".//Components/Favorites";
 import NoPage from "./Components/NoPage";
 import LoginSignup from "./Components/LoginSignup"
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);

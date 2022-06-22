@@ -1,12 +1,14 @@
 import {useEffect, useState} from 'react'
-import { useParams} from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 import FavoritesCard from './FavoritesCard'
 
 function Favorites({user, characters}) {
   const { id } = useParams();
+  const [requestData, setRequestData] = useState(new Date());
+ 
 
   const [favorites, setFavorites] = useState([])
-  const [requestData, setRequestData] = useState(new Date());
+  
 
   // useEffect(() => {
   //   fetch(`/favorites/by_user/${user.id}`)
@@ -18,8 +20,9 @@ function Favorites({user, characters}) {
     fetch(`/favorites/by_user/${user.id}`)
     .then(r => r.json())
     .then(data => setFavorites(data))
+    
 
-  },[id])
+  },[])
 
     const renderFavorites = favorites.map(fav => <FavoritesCard fav={fav} key={fav.id} characters={characters} setFavorites={setFavorites} favorites={favorites} user={user} />)
 
